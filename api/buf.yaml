@@ -1,0 +1,16 @@
+version: v1
+breaking:
+  use:
+    - FILE
+lint:
+  use:
+    - DEFAULT
+  except:
+    - SERVICE_SUFFIX
+  allow_comment_ignores: true
+deps:
+  - buf.build/googleapis/googleapis
+  - buf.build/kratos/apis
+  - buf.build/gnostic/gnostic
+  - buf.build/protocolbuffers/wellknowntypes
+  - buf.build/envoyproxy/protoc-gen-validate

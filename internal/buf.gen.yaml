@@ -1,0 +1,16 @@
+# 配置protoc生成规则
+version: v1
+
+managed:
+  enabled: true
+  optimize_for: SPEED
+
+  go_package_prefix:
+    default: github.com/hxx258456/kratos-layout/internal/conf
+    except:
+      - buf.build/protocolbuffers/wellknowntypes
+
+plugins:
+  - plugin: buf.build/protocolbuffers/go:v1.28.1
+    out: conf
+    opt: paths=source_relative
